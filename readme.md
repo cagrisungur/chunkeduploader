@@ -31,6 +31,7 @@ $ symfony server:start
 ## API Collection
 * You can see all endpoints with [Chunk Video Upload Handler](https://documenter.getpostman.com/view/9431903/TVK5cgWo)
 * You can import the Chunk Video Upload Handler.postman_collection.json file to postman for access all collections
+* Also http://localhost:8000/api url have all the endpoints
 
 # Examples
 
