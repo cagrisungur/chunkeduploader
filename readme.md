@@ -29,6 +29,10 @@ If you have Symfony installed, you can do basically
 ```bash
 $ symfony server:start
 ```
+You can see the the que messages with
+```bash
+$ php bin/console messenger:consume amqp
+```
 
 ## API Collection
 * You can see all endpoints with [Chunk Video Upload Handler](https://documenter.getpostman.com/view/9431903/TVK5cgWo)
