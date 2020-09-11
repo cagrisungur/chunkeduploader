@@ -6,11 +6,13 @@ Chunk video uploader is a Php project for dealing chunked videos.
 * [ffmpeg](https://ffmpeg.org/ffmpeg.html) is a command line toolbox to manipulate, convert and stream multimedia content.
 * [RabbitMQ](https://www.rabbitmq.com/download.html) Version 2.0 or later.
 * [Symfony](https://symfony.com/download) Symfony 5.xx
+* [Composer](https://getcomposer.org/download/)
 
 ## Installation
 ```bash
 $ git clone https://github.com/cagrisungur/chunkeduploader
-$ cd composer install
+$ cd /chunkeduploader
+$ composer install
 ```
 #### Migrate Database
 At the migration folder thanks to symfony you can create database with this command
