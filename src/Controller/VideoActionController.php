@@ -76,7 +76,6 @@ final class VideoActionController extends AbstractController
         $videoCount = count($video->getVideoChunks());
 
         if($videoCount == $this->chunkTotal) {
-            // $video->setLastChunk($this->uploadedFile->)
             $bus->dispatch(new VideoMessage($video->getId()));
         }
 
