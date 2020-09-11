@@ -71,8 +71,6 @@ final class VideoActionController extends AbstractController
 
         $em->flush();
 
-        
-
         $videoCount = count($video->getVideoChunks());
 
         if($videoCount == $this->chunkTotal) {
