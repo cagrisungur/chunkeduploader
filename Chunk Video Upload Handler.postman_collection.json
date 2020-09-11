@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "e55d94bd-82b1-4044-bb51-e09564a559b5",
+		"name": "Chunk Video Upload Handler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/video_chunks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "Need for video - (required)",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "uniqHash",
+							"value": "dd12-dlx1-x",
+							"description": "This is video identity for chunks - (required)",
+							"type": "text"
+						},
+						{
+							"key": "chunkIndex",
+							"value": "4",
+							"description": "Chunk index number - (required)",
+							"type": "text"
+						},
+						{
+							"key": "totalChunk",
+							"value": "5",
+							"description": "Total chunks of video -(required)",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "My video description",
+							"description": "Description of video - (optional)",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "My vide title",
+							"description": "Title of video - (optional)",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/video_chunks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"video_chunks"
+					]
+				},
+				"description": "This endpoint will save your chunks and merge them to final video"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/video_chunks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "Need for video - (required)",
+									"type": "file",
+									"src": "/C:/xampp74/htdocs/pixel90chunk/public/chunks/videoplayback1.mp4"
+								},
+								{
+									"key": "uniqHash",
+									"value": "dd12-dlx1-xyzg1",
+									"description": "This is video identity for chunks - (required)",
+									"type": "text"
+								},
+								{
+									"key": "chunkIndex",
+									"value": "3",
+									"description": "Chunk index number - (required)",
+									"type": "text"
+								},
+								{
+									"key": "totalChunk",
+									"value": "3",
+									"description": "Total chunks of video -(required)",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "My video description",
+									"description": "Description of video - (optional)",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "My vide title",
+									"description": "Title of video - (optional)",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/video_chunks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"video_chunks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, must-revalidate, private"
+						},
+						{
+							"key": "Content-Location",
+							"value": "/api/videos/4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/ld+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Sep 2020 16:12:29 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 11 Sep 2020 16:12:29 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<http://localhost:8000/api/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+						},
+						{
+							"key": "Location",
+							"value": "/api/videos/4"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.2"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Content-Length",
+							"value": "441"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@context\": \"/api/contexts/Video\",\n    \"@id\": \"/api/videos/4\",\n    \"@type\": \"Video\",\n    \"id\": 4,\n    \"thumbnail\": null,\n    \"status\": 0,\n    \"videoSecond\": 0,\n    \"videoHash\": \"dd12-dlx1-xyzg1\",\n    \"videoChunks\": [\n        \"/api/video_chunks/10\",\n        \"/api/video_chunks/11\",\n        \"/api/video_chunks/12\"\n    ],\n    \"name\": \"videoplayback1.mp4\",\n    \"description\": null,\n    \"lastChunk\": null,\n    \"path\": null,\n    \"title\": null,\n    \"createdAt\": \"2020-09-11T18:12:23+02:00\",\n    \"updatedAt\": \"2020-09-11T18:12:23+02:00\",\n    \"remainingChunk\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/videos/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\":\"My new desc\",\r\n    \"title\": \"My new title\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/videos/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos",
+						"{id}"
+					]
+				},
+				"description": "You can edit your videos with this endpoint.\r\n\r\nExample Request:\r\n\r\n{\r\n    \"description\":\"My new description.\",\r\n    \"title\":\"My new title.\"\r\n}"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/videos/{id}",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"My new desc\",\r\n    \"title\": \"My new title\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/videos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"videos",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, must-revalidate, private"
+						},
+						{
+							"key": "Content-Location",
+							"value": "/api/videos/1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/ld+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Sep 2020 16:14:02 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Fri, 11 Sep 2020 16:14:02 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<http://localhost:8000/api/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.2"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Content-Length",
+							"value": "406"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@context\": \"/api/contexts/Video\",\n    \"@id\": \"/api/videos/1\",\n    \"@type\": \"Video\",\n    \"id\": 1,\n    \"thumbnail\": \"dd12-dlx1-x.jpg\",\n    \"status\": 1,\n    \"videoSecond\": 90,\n    \"videoHash\": \"dd12-dlx1-x\",\n    \"videoChunks\": [],\n    \"name\": \"videoplayback1.mp4\",\n    \"description\": \"My new desc\",\n    \"lastChunk\": null,\n    \"path\": \"dd12-dlx1-x.mp4\",\n    \"title\": \"My new title\",\n    \"createdAt\": \"2020-09-11T17:54:57+02:00\",\n    \"updatedAt\": \"2020-09-11T17:54:57+02:00\",\n    \"remainingChunk\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/videos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "you can paginate page by page- (optional)",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/videos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/videos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "you can paginate page by page- (optional)",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"videos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/ld+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Sep 2020 16:14:50 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "\"bf3ca91ed2e4856c760451de62bef2e8\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://localhost:8000/api/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.2"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1665"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@context\": \"/api/contexts/Video\",\n    \"@id\": \"/api/videos\",\n    \"@type\": \"hydra:Collection\",\n    \"hydra:member\": [\n        {\n            \"@id\": \"/api/videos/1\",\n            \"@type\": \"Video\",\n            \"id\": 1,\n            \"thumbnail\": \"dd12-dlx1-x.jpg\",\n            \"status\": 1,\n            \"videoSecond\": 90,\n            \"videoHash\": \"dd12-dlx1-x\",\n            \"videoChunks\": [],\n            \"name\": \"videoplayback1.mp4\",\n            \"description\": \"My new desc\",\n            \"lastChunk\": null,\n            \"path\": \"dd12-dlx1-x.mp4\",\n            \"title\": \"My new title\",\n            \"createdAt\": \"2020-09-11T17:54:57+02:00\",\n            \"updatedAt\": \"2020-09-11T17:54:57+02:00\",\n            \"remainingChunk\": 3\n        },\n        {\n            \"@id\": \"/api/videos/2\",\n            \"@type\": \"Video\",\n            \"id\": 2,\n            \"thumbnail\": \"dd12-dlx1-xy.jpg\",\n            \"status\": 1,\n            \"videoSecond\": 90,\n            \"videoHash\": \"dd12-dlx1-xy\",\n            \"videoChunks\": [],\n            \"name\": \"videoplayback1.mp4\",\n            \"description\": null,\n            \"lastChunk\": null,\n            \"path\": \"dd12-dlx1-xy.mp4\",\n            \"title\": null,\n            \"createdAt\": \"2020-09-11T18:00:38+02:00\",\n            \"updatedAt\": \"2020-09-11T18:00:38+02:00\",\n            \"remainingChunk\": 3\n        },\n        {\n            \"@id\": \"/api/videos/3\",\n            \"@type\": \"Video\",\n            \"id\": 3,\n            \"thumbnail\": \"dd12-dlx1-xyz.jpg\",\n            \"status\": 1,\n            \"videoSecond\": 90,\n            \"videoHash\": \"dd12-dlx1-xyz\",\n            \"videoChunks\": [],\n            \"name\": \"videoplayback1.mp4\",\n            \"description\": null,\n            \"lastChunk\": null,\n            \"path\": \"dd12-dlx1-xyz.mp4\",\n            \"title\": null,\n            \"createdAt\": \"2020-09-11T18:01:35+02:00\",\n            \"updatedAt\": \"2020-09-11T18:01:35+02:00\",\n            \"remainingChunk\": 3\n        },\n        {\n            \"@id\": \"/api/videos/4\",\n            \"@type\": \"Video\",\n            \"id\": 4,\n            \"thumbnail\": \"dd12-dlx1-xyzg1.jpg\",\n            \"status\": 1,\n            \"videoSecond\": 90,\n            \"videoHash\": \"dd12-dlx1-xyzg1\",\n            \"videoChunks\": [],\n            \"name\": \"videoplayback1.mp4\",\n            \"description\": null,\n            \"lastChunk\": \"C:\\\\xampp74\\\\htdocs\\\\pixel90chunk\\\\public\\\\chunks\\\\4d448aef574139bb3443b8d6a79f59b0deec1a02.mp4\",\n            \"path\": \"dd12-dlx1-xyzg1.mp4\",\n            \"title\": null,\n            \"createdAt\": \"2020-09-11T18:12:23+02:00\",\n            \"updatedAt\": \"2020-09-11T18:12:23+02:00\",\n            \"remainingChunk\": 0\n        }\n    ],\n    \"hydra:totalItems\": 4\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/deleteVideo/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/deleteVideo/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deleteVideo",
+						"{id}"
+					]
+				},
+				"description": "You can delete your videos,thumnails and related chunks by given video. \r\n\r\nExample Request: http://localhost:8000/api/deleteVideo/13"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
